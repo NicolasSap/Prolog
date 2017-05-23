@@ -1,0 +1,152 @@
+?- 
+% c:/users/laboratorios/documents/prolog/menues compiled 0.00 sec, 3 clauses
+Warning: c:/users/laboratorios/documents/prolog/arbol_genealogico.pl:15:
+        Singleton variable in branch: Z
+Warning: c:/users/laboratorios/documents/prolog/arbol_genealogico.pl:15:
+        Singleton variable in branch: Z
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 0 clauses
+Warning: c:/users/laboratorios/documents/prolog/arbol_genealogico.pl:15:
+        Singleton variable in branch: Z
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 0 clauses
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 0 clauses
+?- hermano% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.02 sec, 0 clauses
+?- hermano_o_hermana(manuel,maría).
+true .
+
+?- hermano_o_hermana(manuel,manuel).
+true .
+
+?- hermano_o_hermana(manuel,manuel).
+true 
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 0 clauses
+
+Unknown action:  (h for help)
+Action? .
+
+?- 
+|    a
+|    
+Action (h for help) ? abort
+
+% Execution Aborted
+?- hermano_o_hermana(manuel,manuel).
+false.
+
+?- hermano_o_hermana(manuel,maría).
+true.
+
+?- 
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 2 clauses
+?- hermano(manuel,maria).
+false.
+
+?- 
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 0 clauses
+?- hermano(manuel,maria).
+true.
+
+?- hermano(manuel,manuel).
+true.
+
+?- 
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 0 clauses
+?- hermana(manuel,arturo).
+false.
+
+?- hermana(maria,arturo).
+false.
+
+?- hermana(maria,manuel).
+false.
+
+?- hermana(maria,pedro).
+false.
+
+?- 
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 0 clauses
+?- hermana(maria,manuel).
+false.
+
+?- hermana(maria,arturo).
+false.
+
+?- 
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 0 clauses
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 0 clauses
+?- hermana(maria,arturo).
+true.
+
+?- hermana(maria,manuel).
+true.
+
+?- hermana(maria,pedro).
+false.
+
+?- 
+% c:/users/laboratorios/documents/prolog/arbol_genealogico compiled 0.00 sec, 0 clauses
+?- transporte(roma).
+ERROR: Undefined procedure: transporte/1
+ERROR:     However, there are definitions for:
+ERROR:         transporte/2
+false.
+
+?- viaje(roma,2,hotel,P).write(P).
+ERROR: Undefined procedure: ('.')/2
+ERROR:     However, there are definitions for:
+ERROR:         ('.')/3
+false.
+
+?- viaje(roma,2,hotel,P),write(P).
+ERROR: Undefined procedure: viaje/4 (DWIM could not correct goal)
+?- viaje(roma,2,hotel,P).
+ERROR: Undefined procedure: viaje/4 (DWIM could not correct goal)
+?- 
+% c:/users/laboratorios/documents/prolog/viajes compiled 0.00 sec, 1 clauses
+?- viaje(roma,2,hotel,P),write(P).
+120
+P = 120 .
+
+?- viaje(roma,2,hotel,P).
+P = 120 .
+
+?- viajeeconomico(roma,2,hotel,100).
+ERROR: Undefined procedure: viajeeconomico/4 (DWIM could not correct goal)
+?- 
+% c:/users/laboratorios/documents/prolog/viajes compiled 0.00 sec, 1 clauses
+?- viajeeconomico(roma,2,hotel,100).
+ERROR: Undefined procedure: viajeeconomico/4
+ERROR:     However, there are definitions for:
+ERROR:         viajeeconomico/5
+false.
+
+?- viajeeconomico(roma,2,hotel,P,100).
+P = 120 
+ERROR: [Thread pce] c:/users/laboratorios/documents/prolog/viajes.pl:17:49: Syntax error: Operator priority clash
+% c:/users/laboratorios/documents/prolog/viajes compiled 0.00 sec, -1 clauses
+% c:/users/laboratorios/documents/prolog/viajes compiled 0.00 sec, 1 clauses
+
+Unknown action:  (h for help)
+Action? .
+
+?- 
+|    viajeeconomico(roma,2,hotel,P,100).
+P = 120 
+% c:/users/laboratorios/documents/prolog/viajes compiled 0.00 sec, 0 clauses
+
+Unknown action:  (h for help)
+Action? .
+
+?- viajeeconomico(roma,2,hotel,P,100).
+false.
+
+?- viajeeconomico(roma,2,hotel,P,130).
+P = 120 ;
+false.
+
+?- viajeeconomico(_,2,hotel,P,130).
+P = 120 .
+
+?- viajeeconomico(_,2,hotel,P,130).
+P = 120 ;
+P = 90 ;
+false.
